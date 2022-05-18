@@ -1,0 +1,28 @@
+- The binary contains a PNG and an encrypted blob. Also there's a command in there how to decrypt it with a reference to rockyou.txt.
+- Running a brute-force would take forever but the password was in the first 10 tries. Password "password" decrypted the blob. However it only said "No flag!".
+- so back to the drawing board...
+- The loop() disassembly shows this piece of code:
+`  W = button2;
+  *puVar5 = 0x8b;
+  puVar5[-1] = 2;
+  ezButton::isPressed((ezButton *)W);
+  if ((((byte)W == '\0') || (W._0_1_ = (byte)check1 | check1._1_1_, (byte)W != 0)) ||
+     (W._0_1_ = (byte)check2 | check2._1_1_, (byte)W != 0)) {
+    W = button4;
+    *puVar5 = 0xad;
+    puVar5[-1] = 2;
+    ezButton::isPressed((ezButton *)W);
+    if ((((byte)W == '\0') ||
+        (W = (undefined1 *)CONCAT11(check1._1_1_,(byte)check1), W != (undefined1 *)0x1)) ||
+       (W._0_1_ = (byte)check2 | check2._1_1_, (byte)W != 0)) {
+      W = button3; `
+
+  button2, button4, button3 ...
+  Using a real arduino it was possible to easily solve the challenge.
+
+  I will have to try this with an emulator still.
+
+  Yay... it worked with simulator:
+  - simivr as the underlying emulator
+  - simutron for the GUI where you can configure the serial port and the buttons.
+  

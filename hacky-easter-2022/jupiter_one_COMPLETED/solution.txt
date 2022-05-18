@@ -1,0 +1,5 @@
+docker run -it --rm -v $(pwd):/data dominicbreuker/stego-toolkit /bin/bash
+
+/usr/local/bin/stegoveritas jupiter-one.png
+zsteg -a jupiter-one.png
+he2022{jim_jupiter_the_healthiest_man_in_chicago!!}

@@ -1,0 +1,98 @@
+docker run -it sagemath/sagemath:latest
+
+https://hub.docker.com/r/sagemath/sagemath/
+
+docker run -it -v $(pwd):/data sagemath/sagemath /bin/bash
+
+The challenge seems to be the NSA backdoor in the elliptic curve random number generator, q is probably a multiple of p
+
+approach:
+- fully understand the finite field and the elliptic curve on it.
+- how to predict the next random number??
+
+https://blog.0xbadc0de.be/archives/155
+https://www.projectbullrun.org/dual-ec/documents/dual-ec-20150731.pdf
+
+in sage:
+
+sage: p = 1157920892103562487626974469494075735300861434152903141955336313088670
+....: 97853951
+sage: b = 0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b
+sage: field=GF(p), [-3,b]
+sage: print(field)
+(Finite Field of size 115792089210356248762697446949407573530086143415290314195533631308867097853951, [-3, 41058363725152142129326129780047268409114441015993725554835256314039467401291])
+sage: b*3
+123175091175456426387978389340141805227343323047981176664505768942118402203873
+sage: p
+115792089210356248762697446949407573530086143415290314195533631308867097853951
+sage: curve = EllipticCurve(GF(p), [-3,b])
+sage: P=curve.lift_x(15957832354939571418537618117378383777560216674381177964707
+....: 415375932803624163)
+sage: Q=curve.lift_x(66579344068745538488594410918533596972988648549966873409328
+....: 261501470196728491)
+sage: Q.discrete_log(P)
+1337
+
+So P=1337*Q
+
+"""
+This is a Dual_EC_DRBG backdoor solver.
+https://en.wikipedia.org/wiki/Dual_EC_DRBG
+"""
+
+# This elliptical curve is NIST P-256
+p = 115792089210356248762697446949407573530086143415290314195533631308867097853951
+b = 0x5AC635D8AA3A93E7B3EBBD55769886BC651D06B0CC53B0F63BCE3C3E27D2604B
+E = EllipticCurve(GF(p), [-3, b])
+
+# These are the generator points for the PRNG.
+P = E.lift_x(
+    15957832354939571418537618117378383777560216674381177964707415375932803624163
+)
+Q = E.lift_x(
+    66579344068745538488594410918533596972988648549966873409328261501470196728491
+)
+
+# Surprisingly this works and returns 173. I guess the backdoor is pretty weak.
+# This value allows us to completely break the PRNG (i.e. we can accurately
+# predict returned values and states).
+d = Q.discrete_log(P)
+
+
+def do_next(s):
+    """
+    This is essentially the RNG.next() function.
+    Given state `s`, return pseudorandom value `r` and the new state `s_new`.
+    """
+    sP = s * P
+    r = Integer(sP[0])
+    s_new = Integer((r * P)[0])
+    rQ = r * Q
+    return Integer(rQ[0]), s_new
+
+
+def do_guess(r1):
+    """
+    Given a guess for a value `r1` return from the PRNG, determine the next
+    random value as well as the state after that.
+    """
+
+    # Check if `r1` is a valid x coordinate on the curve
+    try:
+        rQ1 = E.lift_x(r1)
+    except ValueError:
+        return None
+
+    sP2 = d * rQ1
+    s2 = Integer(sP2[0])
+    r2, s3 = do_next(s2)
+    return r2, s3
+
+similar write-ups:
+https://born2scan.run/writeups/2021/03/15/UTCTF.html
+https://github.com/cscosu/ctf-writeups/tree/master/2021/utctf/Sleeves
+
+OK... so all these articles and write-ups describe how you brute-force the r1 using another random number r2 which we don't have. However what we can do is continue playing and we'll know if the random number was odd or even and after a few tries we should be able to know what the state was that the prng was using.
+
+We need to create an array of i's (brute force full r1), states, and random numbers and continue to delete the randum numbers that were wrong.
+

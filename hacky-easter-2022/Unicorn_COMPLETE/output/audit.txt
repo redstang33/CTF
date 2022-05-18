@@ -1,0 +1,28 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Fri Apr 15 10:12:09 2022
+Invocation: foremost unicorn.png 
+Output directory: /home/hacker/hacky-easter-2022/Unicorn_COMPLETE/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: unicorn.png
+Start: Fri Apr 15 10:12:09 2022
+Length: 552 KB (565518 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.png 	     104 KB 	          0 	  (512 x 512)
+1:	00000208.png 	     104 KB 	     106516 	  (512 x 512)
+2:	00000416.png 	     104 KB 	     213032 	  (512 x 512)
+3:	00000624.png 	      32 KB 	     319548 	  (512 x 512)
+4:	00000688.png 	     104 KB 	     352486 	  (512 x 512)
+5:	00000896.png 	     104 KB 	     459002 	  (512 x 512)
+Finish: Fri Apr 15 10:12:09 2022
+
+6 FILES EXTRACTED
+	
+png:= 6
+------------------------------------------------------------------
+
+Foremost finished at Fri Apr 15 10:12:09 2022

@@ -1,0 +1,20 @@
+Either look in the console.log when pressing the firealert button and cut and paste the output into an editor
+x
+script.js:2  x
+script.js:3  x
+script.js:3  x
+script.js:4  x
+script.js:4  x
+script.js:5  x
+script.js:5  flag: he2022{th1s_fl4g_1s_bl4ck_n0t}
+script.js:6  x
+script.js:6  x
+script.js:7  x
+script.js:7  x
+
+
+or look at the javascript and find this:
+
+console.log(atob("JWMgZmxhZzogaGUyMDIye3RoMXNfZmw0Z18xc19ibDRja19uMHR9"),
+
+base64: flag: he2022{th1s_fl4g_1s_bl4ck_n0t}

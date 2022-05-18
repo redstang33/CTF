@@ -1,0 +1,10 @@
+prefix=/home/al/prj/hardware/CNC/PCBMilling/firmware/Arduino-CodeBlocks/simutron-rb1.0.1-sr1
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: simavr
+Description: Atmel(tm) AVR 8 bits simulator
+Version: tag:v1.3
+Cflags: -I${includedir}/simavr
+Libs: -L${libdir} -lsimavr -lelf

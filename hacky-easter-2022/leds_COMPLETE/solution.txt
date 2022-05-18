@@ -1,0 +1,6 @@
+google part of the hex dump
+
+it's a microbit program
+
+use the online tool to reverse engineer the code and then study
+the code and see that there's character replacement to get the flag.

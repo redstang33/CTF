@@ -1,0 +1,32 @@
+
+
+The shared key is pow(A,b,p)
+p=2272978429
+g=2
+A=1116819144
+b= some random between 1 and p
+B: 1042188408
+
+ ~  time python -c "pow(2,2272973429,2272978429)"                          ✔
+python -c "pow(2,2272973429,2272978429)"  0.02s user 0.00s system 94% cpu 0.031 total
+ ~  python                                                                 ✔
+Python 3.9.12 (main, Mar 24 2022, 13:02:21)
+[GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 0.02*2272978429
+45459568.58
+>>> 45459568.58/60
+757659.4763333333
+>>> 757659.4763333333/24
+31569.144847222222
+>>> 757659.4763333333/60
+12627.657938888888
+>>> 12627.657938888888/24
+526.1524141203703
+
+..., brute force can take up to 526 days!
+
+discrete logarithm! https://www.alpertron.com.ar/DILOG.HTM
+exponent is 620620105
+
+then use the solver.py

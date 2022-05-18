@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Apr 24 14:56:36 2022
+Invocation: foremost backtotheroots 
+Output directory: /home/hacker/hacky-easter-2022/back_to_the_roots/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: backtotheroots
+Start: Sun Apr 24 14:56:36 2022
+Length: 98 KB (100404 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Sun Apr 24 14:56:36 2022
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Sun Apr 24 14:56:36 2022

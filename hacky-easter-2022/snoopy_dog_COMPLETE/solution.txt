@@ -1,0 +1,5 @@
+it's a citrix password
+
+https://www.remkoweijnen.nl/blog/2012/05/13/encoding-and-decoding-citrix-passwords/
+
+there was an online tool somewhere...

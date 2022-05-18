@@ -1,0 +1,7 @@
+on the machine in /opt there's a script that encodes the flag.
+the key is based on the time though and it changes so once you login
+you have to be quick.
+
+openssl enc -d -aes-256-cbc -in flag.enc -kfile /tmp/7367111C2875730D00686C13B98E7F36
+
+he2022{0p3n-35-35-37-f0r-pr0fit}

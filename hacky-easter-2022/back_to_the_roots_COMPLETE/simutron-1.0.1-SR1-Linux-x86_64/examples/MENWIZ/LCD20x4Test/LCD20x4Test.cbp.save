@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="LCD20x4Test" />
+		<Option pch_mode="2" />
+		<Option compiler="debug_arduino_1612_gnu_avr_gcc_compiler" />
+		<Build>
+			<Target title="Debug Arduino Duemilanove w/ ATmega328">
+				<Option output="bin/Debug/LCD20x4Test.elf" prefix_auto="1" extension_auto="0" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="debug_arduino_1612_gnu_avr_gcc_compiler" />
+				<Script file="target_build_helper.script" />
+				<Compiler>
+					<Add option="-mmcu=$(MCU)" />
+					<Add option="-D$(AVR_IODEF)" />
+					<Add option="-fno-exceptions" />
+					<Add option="-ffunction-sections" />
+					<Add option="-fdata-sections" />
+					<Add option="-DF_CPU=${CPU_FREQ}" />
+					<Add option="-g" />
+					<Add option="-O0" />
+					<Add directory="$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard" />
+					<Add directory="$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino" />
+				</Compiler>
+				<Linker>
+					<Add option="-mmcu=$(MCU)" />
+					<Add option="-Wl,-Map=$(TARGET_OUTPUT_FILE).map,--cref" />
+					<Add library="core_DebugArduinoDuemnovewATmea328_16" />
+					<Add library="m" />
+					<Add directory="lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/abi.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/abi.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/HardwareSerial.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/HardwareSerial.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/HardwareSerial0.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/HardwareSerial0.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/IPAddress.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/IPAddress.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/wiring_shift.c&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/wiring_shift.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/wiring_digital.c&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/wiring_digital.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/USBCore.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/USBCore.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/main.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/main.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/Print.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/Print.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/wiring.c&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/wiring.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/libraries/HID/src/HID.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/HID.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/WMath.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/WMath.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/WInterrupts.c&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/WInterrupts.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/Tone.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/Tone.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/wiring_analog.c&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/wiring_analog.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/CDC.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/CDC.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/new.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/new.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/wiring_pulse.c&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/wiring_pulse.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/Stream.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/Stream.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/WString.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/WString.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/abi.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/HardwareSerial.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/HardwareSerial0.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/IPAddress.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/wiring_shift.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/wiring_digital.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/USBCore.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/main.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/Print.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/wiring.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/HID.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/WMath.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/WInterrupts.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/Tone.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/wiring_analog.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/CDC.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/new.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/wiring_pulse.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/Stream.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_DebugArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Debug/core_DebugArduinoDuemnovewATmea328_16/WString.cpp.o&quot;' />
+					<Add after="avr-objcopy -O ihex -R .eeprom -R .eesafe $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).hex" />
+					<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).eep.hex" />
+					<Add after='echo -n &quot;[[ AVRprintMemSize(3); ]]&quot; &gt;&gt; /dev/null' />
+					<Add after="avr-objdump -h --source --demangle --wide $(TARGET_OUTPUT_FILE) &gt; $(TARGET_OUTPUT_FILE).lss" />
+				</ExtraCommands>
+				<Environment>
+					<Variable name="AVR_IODEF" value="__AVR_ATmega328P__" />
+					<Variable name="BOARD" value="Arduino Duemilanove w/ ATmega328" />
+					<Variable name="CPU_FREQ" value="16000000L" />
+					<Variable name="MAX_SIZE" value="30720" />
+					<Variable name="MAX_SRAM" value="2048" />
+					<Variable name="MCU" value="atmega328p" />
+					<Variable name="PROTOCOL" value="arduino" />
+					<Variable name="UPLOAD_BAUDRATE" value="57600" />
+					<Variable name="UPLOAD_PORT" value="/dev/arduino" />
+				</Environment>
+			</Target>
+			<Target title="Arduino Duemilanove w/ ATmega328">
+				<Option output="bin/Release/LCD20x4Test.elf" prefix_auto="1" extension_auto="0" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="debug_arduino_1612_gnu_avr_gcc_compiler" />
+				<Script file="/home/al/local/codeblocks/bin/profile-arduino/.codeblocks/share/codeblocks/templates/wizard/arduino/target_build_helper.script" />
+				<Compiler>
+					<Add option="-mmcu=$(MCU)" />
+					<Add option="-D$(AVR_IODEF)" />
+					<Add option="-fno-exceptions" />
+					<Add option="-ffunction-sections" />
+					<Add option="-fdata-sections" />
+					<Add option="-s" />
+					<Add option="-DF_CPU=${CPU_FREQ}" />
+					<Add option="-Os" />
+					<Add directory="$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard" />
+					<Add directory="$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino" />
+				</Compiler>
+				<Linker>
+					<Add option="-mmcu=$(MCU)" />
+					<Add option="-Wl,-Map=$(TARGET_OUTPUT_FILE).map,--cref" />
+					<Add option="-s" />
+					<Add library="core_ArduinoDuemnovewATmea328_16" />
+					<Add library="m" />
+					<Add directory="lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/abi.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/abi.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/HardwareSerial.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/HardwareSerial.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/HardwareSerial0.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/HardwareSerial0.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/IPAddress.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/IPAddress.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/wiring_shift.c&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/wiring_shift.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/wiring_digital.c&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/wiring_digital.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/USBCore.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/USBCore.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/main.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/main.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/Print.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/Print.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/wiring.c&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/wiring.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/libraries/HID/src/HID.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/HID.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/WMath.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/WMath.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/WInterrupts.c&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/WInterrupts.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/Tone.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/Tone.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/wiring_analog.c&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/wiring_analog.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/CDC.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/CDC.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/new.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/new.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/wiring_pulse.c&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/wiring_pulse.c.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/Stream.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/Stream.cpp.o&quot;' />
+					<Add before='avr-g++ -DCODE_BLOCKS -DARDUINO=${ARDUINO} -Wall -mmcu=$(MCU) -D$(AVR_IODEF) -fno-exceptions -ffunction-sections -fdata-sections -s -DF_CPU=${CPU_FREQ} -Os -I&quot;$(PROJECT_DIR).&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/variants/standard&quot; -I&quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino&quot; -c &quot;$(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino/WString.cpp&quot; -o &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/WString.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/abi.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/HardwareSerial.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/HardwareSerial0.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/IPAddress.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/wiring_shift.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/wiring_digital.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/USBCore.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/main.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/Print.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/wiring.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/HID.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/WMath.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/WInterrupts.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/Tone.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/wiring_analog.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/CDC.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/new.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/wiring_pulse.c.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/Stream.cpp.o&quot;' />
+					<Add before='avr-ar rcs &quot;$(PROJECT_DIR)lib/libcore_ArduinoDuemnovewATmea328_16.a&quot; &quot;$(PROJECT_DIR)obj/Release/core_ArduinoDuemnovewATmea328_16/WString.cpp.o&quot;' />
+					<Add after="avr-objcopy -O ihex -R .eeprom -R .eesafe $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).hex" />
+					<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_FILE).eep.hex" />
+					<Add after='echo -n &quot;[[ AVRprintMemSize(3); ]]&quot; &gt;&gt; /dev/null' />
+					<Add after="avr-objdump -h --source --demangle --wide $(TARGET_OUTPUT_FILE) &gt; $(TARGET_OUTPUT_FILE).lss" />
+				</ExtraCommands>
+				<Environment>
+					<Variable name="AVR_IODEF" value="__AVR_ATmega328P__" />
+					<Variable name="BOARD" value="Arduino Duemilanove w/ ATmega328" />
+					<Variable name="CPU_FREQ" value="16000000L" />
+					<Variable name="MAX_SIZE" value="30720" />
+					<Variable name="MAX_SRAM" value="2048" />
+					<Variable name="MCU" value="atmega328p" />
+					<Variable name="PROTOCOL" value="arduino" />
+					<Variable name="UPLOAD_BAUDRATE" value="57600" />
+					<Variable name="UPLOAD_PORT" value="/dev/arduino" />
+				</Environment>
+			</Target>
+			<Environment>
+				<Variable name="ARDUINO" value="106" />
+				<Variable name="ARDUINO_DIR" value="/home/al/local/arduino-1.6.12" />
+				<Variable name="SKETCH_DIR" value="../../sketchbook" />
+			</Environment>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-x c++" />
+			<Add option="-DCODE_BLOCKS" />
+			<Add option="-DARDUINO=${ARDUINO}" />
+			<Add option="-DUSE_LIQUIDCRYSTAL=1" />
+			<Add option="-DUSE_BUTTONS=1" />
+			<Add option="-DUSE_EEPROM=1" />
+			<Add directory="." />
+			<Add directory="$(ARDUINO_DIR)/libraries" />
+			<Add directory="$(SKETCH_DIR)/libraries" />
+			<Add directory="$(ARDUINO_DIR)/libraries/LiquidCrystal/src" />
+			<Add directory="$(SKETCH_DIR)/libraries/Buttons" />
+			<Add directory="$(ARDUINO_DIR)/hardware/arduino/avr/libraries/EEPROM/src" />
+			<Add directory="../" />
+		</Compiler>
+		<Linker>
+			<Add option="-Wl,--gc-sections" />
+		</Linker>
+		<Unit filename="../MENWIZ.cpp" />
+		<Unit filename="../MENWIZ.h" />
+		<Unit filename="LCD20x4Test.cpp">
+			<Option weight="0" />
+		</Unit>
+		<Unit filename="generated/libraries.cpp">
+			<Option weight="65" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<lib_finder disable_auto="1" />
+			<debugger>
+				<remote_debugging target="Debug Arduino Duemilanove w/ ATmega328">
+					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="1212" />
+				</remote_debugging>
+			</debugger>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,9 @@
+#Ghidra Lock File
+#Wed May 11 20:30:49 CEST 2022
+OS\ Name=Linux
+OS\ Version=5.16.0-kali7-amd64
+Username=hacker
+Hostname=hlkali
+<META>\ Supports\ File\ Channel\ Locking=Channel Lock
+OS\ Architecture=amd64
+Timestamp=5/11/22, 8\:30 PM

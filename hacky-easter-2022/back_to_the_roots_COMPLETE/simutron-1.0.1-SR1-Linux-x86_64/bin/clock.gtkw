@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.45 (w)1999-2012 BSI
+[*] Fri Jul 22 04:07:51 2016
+[*]
+[dumpfile] "clock.vcd"
+[dumpfile_mtime] "Fri Jul 22 04:07:08 2016"
+[dumpfile_size] 3270
+[savefile] "clock.gtkw"
+[timestart] 0
+[size] 1920 1011
+[pos] -1 -4
+*-32.751289 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 218
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 305
+@28
+logic.Clock
+logic.Q0
+logic.Q1
+logic.Q2
+@29
+logic.Q3
+[pattern_trace] 1
+[pattern_trace] 0

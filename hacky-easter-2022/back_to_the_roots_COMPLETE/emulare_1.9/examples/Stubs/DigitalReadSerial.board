@@ -1,0 +1,80 @@
+<board>
+  <doc-version>0.1</doc-version>
+  <components>
+    <component>
+      <name>ATMega 1</name>
+      <dll>C:\temp\emulare_1.7\components\ATMega.dll</dll>
+      <title>ATMega</title>
+      <version>1.0.0.0</version>
+      <specific>
+        <ATMega>
+          <Program>DigitalReadSerial.cpp.hex</Program>
+          <SerialPort>
+          </SerialPort>
+        </ATMega>
+      </specific>
+      <position>
+        <x>317</x>
+        <y>102</y>
+      </position>
+    </component>
+    <component>
+      <name>Switch 1</name>
+      <dll>C:\temp\emulare_1.7\components\BasicComponents.dll</dll>
+      <title>Switch</title>
+      <version>1.0.0.0</version>
+      <specific />
+      <position>
+        <x>143</x>
+        <y>77</y>
+      </position>
+    </component>
+    <component>
+      <name>VCC 1</name>
+      <dll>C:\temp\emulare_1.7\components\BasicComponents.dll</dll>
+      <title>VCC</title>
+      <version>1.0.0.0</version>
+      <specific />
+      <position>
+        <x>150</x>
+        <y>25</y>
+      </position>
+    </component>
+  </components>
+  <wires>
+    <wire>
+      <object1>0</object1>
+      <object2>1</object2>
+      <pinName1>PD2</pinName1>
+      <pinName2>c2</pinName2>
+      <linePath>
+        <segment>
+          <x1>167</x1>
+          <y1>126</y1>
+          <x2>167</x2>
+          <y2>141</y2>
+        </segment>
+        <segment>
+          <x1>167</x1>
+          <y1>141</y1>
+          <x2>317</x2>
+          <y2>141</y2>
+        </segment>
+      </linePath>
+    </wire>
+    <wire>
+      <object1>1</object1>
+      <object2>2</object2>
+      <pinName1>c1</pinName1>
+      <pinName2>Vcc</pinName2>
+      <linePath>
+        <segment>
+          <x1>167</x1>
+          <y1>49</y1>
+          <x2>167</x2>
+          <y2>77</y2>
+        </segment>
+      </linePath>
+    </wire>
+  </wires>
+</board>

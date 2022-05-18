@@ -1,0 +1,48 @@
+forbidden when:
+any vowel aeiou
+
+.
+;
+’
+
+interesting observations:
+$vr probably expands variables
+<m> html tags!
+{$y??1}
+
+tried all sort of string operations but failed
+seems like this is the code that's run on the web server:
+
+<html>
+<body>
+
+<?php
+$string = "beautiful";
+$time = "winter";
+
+$str = "This is a $string $time  morning!";
+echo $str. "<br>";
+
+eval("\$str = \"$str\";");
+echo $str;
+?>
+</body>
+</html>
+
+
+The eval piece must be the vulnerable part
+
+next: try different charsets
+
+https://krebsonsecurity.com/2018/03/look-alike-domains-and-visual-confusion/
+
+%u0410p%u043ell%u043e ... was forbidden
+(because of the u)
+
+%D0%90 is an A! (Cyberchef Unicode and then URLEncode)
+%d0 %be would be the o
+http://46.101.107.117:2205/?name=%d0%90p\320\276ll\320\276
+
+... and then I realized that simply sending oct works!
+
+http://46.101.107.117:2205/?name=\101p\157ll\157

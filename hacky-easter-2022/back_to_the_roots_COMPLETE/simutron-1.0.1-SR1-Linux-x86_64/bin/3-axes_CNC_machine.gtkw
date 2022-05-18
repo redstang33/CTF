@@ -1,0 +1,25 @@
+[*]
+[*] GTKWave Analyzer v3.3.45 (w)1999-2012 BSI
+[*] Thu Jul 21 08:41:30 2016
+[*]
+[dumpfile] "3-axes_CNC_machine.vcd"
+[dumpfile_mtime] "Thu Jul 21 07:34:32 2016"
+[dumpfile_size] 10037
+[savefile] "3-axes_CNC_machine.gtkw"
+[timestart] 0
+[size] 1920 1011
+[pos] -1 -4
+*-28.580688 1099165562 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 218
+[signals_width] 102
+[sst_expanded] 1
+[sst_vpaned_height] 305
+@28
+logic.LED1
+logic.Phase0
+logic.Phase1
+logic.Phase2
+@29
+logic.RampClock
+[pattern_trace] 1
+[pattern_trace] 0

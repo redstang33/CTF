@@ -1,0 +1,61 @@
+<board>
+  <doc-version>0.1</doc-version>
+  <components>
+    <component>
+      <name>ATMega 1</name>
+      <dll>C:\temp\emulare_1.7\components\ATMega.dll</dll>
+      <title>ATMega</title>
+      <version>1.0.0.0</version>
+      <specific>
+        <ATMega>
+          <Program>AnalogReadSerial.cpp.hex</Program>
+          <SerialPort>
+          </SerialPort>
+        </ATMega>
+      </specific>
+      <position>
+        <x>390</x>
+        <y>165</y>
+      </position>
+    </component>
+    <component>
+      <name>AnalogIn 1</name>
+      <dll>C:\temp\emulare_1.7\components\BasicComponents.dll</dll>
+      <title>AnalogIn</title>
+      <version>1.0.0.0</version>
+      <specific />
+      <position>
+        <x>190</x>
+        <y>80</y>
+      </position>
+    </component>
+  </components>
+  <wires>
+    <wire>
+      <object1>0</object1>
+      <object2>1</object2>
+      <pinName1>PC0</pinName1>
+      <pinName2>c</pinName2>
+      <linePath>
+        <segment>
+          <x1>256</x1>
+          <y1>92</y1>
+          <x2>524</x2>
+          <y2>92</y2>
+        </segment>
+        <segment>
+          <x1>524</x1>
+          <y1>92</y1>
+          <x2>524</x2>
+          <y2>224</y2>
+        </segment>
+        <segment>
+          <x1>524</x1>
+          <y1>224</y1>
+          <x2>489</x2>
+          <y2>224</y2>
+        </segment>
+      </linePath>
+    </wire>
+  </wires>
+</board>

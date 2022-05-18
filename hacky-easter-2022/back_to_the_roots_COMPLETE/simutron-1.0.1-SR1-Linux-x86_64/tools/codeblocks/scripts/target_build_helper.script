@@ -1,0 +1,113 @@
+//!squirrel script
+Include(_T("wizard_functions.script"));
+
+/**
+  Mandatory entry point for registered build script.
+  Get called at early build preparation stage.
+  This function, even it is empty,
+  allows this entire script to be loaded into the namespace
+  of build process, thus making all our functions available
+  to call from within pre/post build steps.
+*/
+function SetBuildOptions(base)
+{
+}
+
+/**
+  Script variable expansion function.
+  Prints target memory usage percent.
+  To call it put line
+    echo -n "[[ AVRprintMemSize(3); ]]" >> /dev/null
+    inthe post-build step.
+*/
+function AVRprintMemSize(showMessage = 0)
+{
+  /*
+    // In WinAVR avr-size is compiled with patches to produce a fancy output
+    // which displays the percentage of memory used by the application for the
+    // target mcu. However, this option is not available under standard binutils
+    // avr-size.
+    if (PLATFORM_MSW == PLATFORM) // windoz
+        pb_avrsize = _T("avr-size --mcu=$(MCU) --format=avr $(TARGET_OUTPUT_FILE)");
+  */
+  local project = GetProjectManager().GetActiveProject();
+  //local target_name = project.GetActiveBuildTarget();
+  local target = project.GetCurrentlyCompilingTarget();
+  if (IsNull(target))
+    return;
+  local pb_avrsize = _T("avr-size -A ") + target.GetOutputFilename();
+  Log(pb_avrsize);
+  local max_prog = wxString_ToLong(target.GetVar(_T("MAX_SIZE")));
+  local max_sram = wxString_ToLong(target.GetVar(_T("MAX_SRAM")));
+  Log(_T("max_prog=") + max_prog);
+  Log(_T("max_sram=") + max_sram);
+  if ((max_prog > 0) && (max_sram > 0))
+  {
+    local dump = IO.ExecuteAndGetOutput(pb_avrsize);
+    //Log(dump);
+    local section_list = sqStrSplit(wxStr2sqStr(dump), "\n");
+    local prog_used = 0;
+	local total_flash = 0;
+	local flash_data = 0;
+    local sram_used = 0;
+    foreach (section in section_list)
+    {
+      local columns = sqStrSplit(section, " ", 0, true);
+      if (columns.len() < 3)
+        continue;
+      if (section.find(".text") == 0)
+      {
+        prog_used += columns[1].tointeger();
+		total_flash += columns[1].tointeger();
+      }
+      else if (section.find(".data") == 0)
+      {
+        sram_used += columns[1].tointeger();
+		total_flash += columns[1].tointeger();
+		flash_data += columns[1].tointeger();
+      }
+      else if (section.find(".noinit") == 0)
+      {
+        sram_used += columns[1].tointeger();
+      }
+      else if (section.find(".bss") == 0)
+      {
+        sram_used += columns[1].tointeger();
+      };
+    }
+
+    Log(_T("prog_used=") + prog_used);
+    Log(_T("sram_used=") + sram_used);
+
+    local text = _T("--------\\\n")
+      + _T("Memory Details:\\\n")
+      + _T("Binary sketch size: ") + prog_used
+        + _T(" bytes (of ") + max_prog
+        + _T(" bytes maximum); ") + prog_used*100/max_prog + _T("% used\\\n")
+      + _T("Data initialization in flash: ") + flash_data
+        + _T(" bytes (of ") + max_prog
+        + _T(" bytes maximum); ") + flash_data*100/max_prog + _T("% used\\\n")
+      + _T("FLASH size: ") + total_flash + _T(" bytes (of ") + max_prog
+        + _T(" bytes maximum); ") + total_flash*100/max_prog + _T("% used\\\n")
+      + _T("SRAM size: ") + sram_used + _T(" bytes (of ") + max_sram
+        + _T(" bytes maximum); ") + sram_used*100/max_sram + _T("% used\\\n")
+      +_T("-------\\\n");
+
+    if (sram_used > max_sram)
+      text += _T("ERROR: Allowable chip memory exceeded. See http://www.arduino.cc/en/Reference/PROGMEM to reduce ram size\\\n");
+    else if (sram_used*100/max_sram > 80)
+      text += _T("WARNING: Large amount of chip memory used. Consider using PROGMEM, http://www.arduino.cc/en/Reference/PROGMEM, to reduce ram size\\\n");
+    if (total_flash > max_prog)
+      text += _T("ERROR: Sketch too big. See http://www.arduino.cc/en/Guide/Troubleshooting#size for tips on reducing it.");
+
+    if ((showMessage & 1) > 0)
+      print(text);
+
+    if ((showMessage & 2) > 0)
+    {
+      local msg = text;
+      msg.Replace(_T("\\"), _T(""), true);
+      ShowInfo(msg);
+    }
+  }
+}

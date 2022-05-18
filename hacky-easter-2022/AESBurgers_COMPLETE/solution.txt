@@ -1,0 +1,90 @@
+known AES ECB plaintext attack.
+brute force the first 16 characters
+
+he2022{
+AAAAAAAAA{2202eh
+he2022{AAAAAAAAA
+
+brute-force? it would be 9 characters, so no.
+
+padding character ' '
+
+chosen plaintext attack is possible - number of patties can control the padding.
+
+The user input will be the first 16 characters and appended at the end of the string. 
+Once should be able to find out the length of the flag:
+
+determine length of flag(X)
+
+(((2*16 + y * x) % 16)+1)*2*16 = cipher
+
+cipher/32-1 = (2*16+y*x) % 16
+
+minimum 32 characters
+
+
+approach:
+- figure out the length of the flag: 35
+- find cipher with equal first and last block
+- find cipher with only one (known) character off and padding
+
+formula for the length of the cipher:
+
+len(cipher) = (((2*16 + patties * len(flag)) //5* 16) +1) * 32
+
+len(cipher) // 32 - 1 = (2*16 + patties * len(flag)) // 16
+
+
+AAAAAAAAAAAAAAAAhe2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}AAAAAAAAAAAAAAAA
+
+             AAAAAAAAAAAAAAAA
+
+16: 16
+15: 13
+14: 10
+13: 7
+12: 4
+11: 1
+10: 14
+9: 11
+1: 3
+2: 6
+3: 9
+4: 12
+5: 15
+6: 2
+7: 5
+8: 8
+9: 11
+i  a
+a = (i*35 % 16)
+16a = 16i*35*16
+
+a: 16 - (i*35 % 16) 
+
+a*16/35
+
+
+number of non-A's
+
+b'l}AAAAAAAAAAAAAAhe2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}AAAAAAAAAAAAAA}l              '
+2629ff4fdec9391d2e3efc0f4fd0481944bfa70262be6de5510b5e1bde9148f16081cd2ca621c91238511bad13f2b1b1dcaa4a419de82fe910349417da8e261dce8adcab2dfa5d22a5aeedce7ffe00b28fea31c7e68c3b89c0a5667674514eb77425a5ff8f1f6d2c9c433e03f3b296afd2f2933d8dd5ecdb87a7fcbe30d92851f0edbc800b207b89abddbea793f446b4a0cd5f722a6ed14df059cadb976413c91fc5c82823396083e1d933598098bb8ee26e9d1995641d70f74c3a122c1dae06ce6f42b3d79e7d4827a40c41f7edba5096579de7253389c32566ffe81816d9332629ff4fdec9391d2e3efc0f4fd04819db18e60215c7efa47d58bc252160a2fd
+_ver_ultra_cool
+
+}looc_artlu_rev_
+
+deleted from code:
+def flagsize(ciphers):
+	for i in range(1,25):
+		for j in range(32,48):
+			if len(ciphers[i])//32 - 1 == (2*16+ i*j)//16:
+				print(i,j)
+
+flagsize(ciphers)
+
+print(ciphers[1])
+print(len(ciphers[1]))
+
+_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}he2022{this_will_be_ver_ultra_cool}AAAAAAAAAAAAAAAA          
+
+35x 2 full blocks and 3 characters 

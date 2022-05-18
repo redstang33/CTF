@@ -1,0 +1,5 @@
+<ExternalComponents>
+  <Component>components\ATMega.dll</Component>
+  <Component>components\BasicComponents.dll</Component>
+  <Component>components\HD44780Lcd.dll</Component>
+</ExternalComponents>

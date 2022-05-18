@@ -1,0 +1,30 @@
+option 1: create egg
+- can't be more than 4 eggs
+- egg size can't be above 1057
+
+There's a library included libc-2.33
+
+edit_egg _could_ be the vulnerable section. I see a readfsqword(0x28u) in there and googline this...
+
+googling gave me this write-up:
+
+https://github.com/ybieri/ctf-writeups/tree/master/SwampCTF2019/dream_heap
+
+looks very similar to the egg...
+
+$ one_gadget libc-2.33.so
+0xcb5ca execve("/bin/sh", r12, r13)
+constraints:
+  [r12] == NULL || r12 == NULL
+  [r13] == NULL || r13 == NULL
+
+0xcb5cd execve("/bin/sh", r12, rdx)
+constraints:
+  [r12] == NULL || r12 == NULL
+  [rdx] == NULL || rdx == NULL
+
+0xcb5d0 execve("/bin/sh", rsi, rdx)
+constraints:
+  [rsi] == NULL || rsi == NULL
+  [rdx] == NULL || rdx == NULL
+

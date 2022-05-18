@@ -1,0 +1,31 @@
+<!DOCTYPE SimutronQt4>
+<circuit type="simu">
+ 
+Push Button-2: 
+<item labelrot="0" labelx="-56" x="-236" itemtype="Push Button" id="Push Button-2" rotation="0" y="-380" labely="-8" objectName="Push Button-2" Show_id="false"/>
+ 
+Push Button-3: 
+<item labelrot="0" labelx="-56" x="-276" itemtype="Push Button" id="Push Button-3" rotation="0" y="-140" labely="-8" objectName="Push Button-3" Show_id="false"/>
+ 
+Push Button-4: 
+<item labelrot="0" labelx="-56" x="-268" itemtype="Push Button" id="Push Button-4" rotation="0" y="-284" labely="-8" objectName="Push Button-4" Show_id="false"/>
+ 
+AVR Serial Connection-14: 
+<item labelrot="0" labelx="-24" x="76" Host_PTY="/tmp/simavr1-uart0" itemtype="AVR Serial Connection" id="AVR Serial Connection-14" rotation="0" y="92" Target_MCU="AVR MCU-1" labely="-44" objectName="AVR Serial Connection-14" Target_UART="uart0" Show_id="false"/>
+ 
+AVR MCU-14: 
+<item serial_connections="uart0=AVR Serial Connection-18=/tmp/simavr14-uart0" labelrot="0" labelx="-40" x="-116" firmware_elf="/home/hacker/hacky-easter-2022/back_to_the_roots/backtotheroots.elf" itemtype="AVR MCU" id="AVR MCU-14" fcpu_HZ="16000000" rotation="0" y="-316" MCU_model="atmega328" labely="-108" objectName="AVR MCU-14" UART_list="uart0" Show_id="false"/>
+ 
+AVR Serial Connection-18: 
+<item labelrot="0" labelx="-8" x="-4" Host_PTY="/tmp/simavr14-uart0" itemtype="AVR Serial Connection" id="AVR Serial Connection-18" rotation="0" y="-252" Target_MCU="AVR MCU-14" labely="-32" objectName="AVR Serial Connection-18" Target_UART="uart0" Show_id="false"/>
+ 
+Connector-15: 
+<item startpininv="false" labelrot="0" labelx="-8" x="-220" itemtype="Connector" id="Connector-15" endpinid="AVR MCU-14_Innod-18" endpininv="false" rotation="0" y="-380" pointlist="-220,-380,-220,-300,-164,-300" startpinid="Push Button-2outnod" labely="-32" objectName="Connector-15" Show_id="false"/>
+ 
+Connector-16: 
+<item startpininv="false" labelrot="0" labelx="-8" x="-252" itemtype="Connector" id="Connector-16" endpinid="AVR MCU-14_Innod-20" endpininv="false" rotation="0" y="-284" pointlist="-252,-284,-164,-284" startpinid="Push Button-4outnod" labely="-32" objectName="Connector-16" Show_id="false"/>
+ 
+Connector-17: 
+<item startpininv="false" labelrot="0" labelx="-8" x="-260" itemtype="Connector" id="Connector-17" endpinid="AVR MCU-14_Innod-19" endpininv="false" rotation="0" y="-140" pointlist="-260,-140,-260,-292,-164,-292" startpinid="Push Button-3outnod" labely="-32" objectName="Connector-17" Show_id="false"/>
+ 
+</circuit>

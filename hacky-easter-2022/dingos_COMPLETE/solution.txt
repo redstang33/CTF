@@ -1,0 +1,14 @@
+mkdir out
+s3scanner dump --bucket dingos -d out
+
+in img directory you see a new png file that wasn't there before.
+
+aws s3api list-object-versions --bucket dingos
+
+reveals that there's multiple version of the webpage.
+retrieve version 1 of the picture
+
+aws s3api list-object-versions --bucket dingos --prefix img/dingo_egg_ognid.png
+shows VersionId
+
+https://dingos.s3.eu-west-1.amazonaws.com/img/dingo_egg_ognid.png?versionId=efyGzmXduxQAcaQIBgsxEj5i8xlCUdjG

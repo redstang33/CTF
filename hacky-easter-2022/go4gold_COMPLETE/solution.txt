@@ -1,0 +1,27 @@
+Debugging and disassembly with IDA
+the binary came from golang
+
+3 main functions:
+- main
+  - prints the banner and asks for the input string
+- maschadar (Mischen)
+  - input ABCDEFGHIJKLMNOPQRSTUVWXYZ12 output GHBCANOPQRSTUVWXYZ12DEFIJKLM
+- remplazzar (Ersetzen)
+  - input GHBCANOPQRSTUVWXYZ12DEFIJKLM output GJDGEOPSTWSVWZ[YZ]47DGHMNLMP (vignere key ACCEEBBDDFACCEBBACCEEBBD but some numbers and symbols missing)
+- verifitgar (rumansch for verify)
+  - when called the RAX contains the scrambled input string. Another string is assembled and ends up in RBX which is aug{lmepdpeuvlisvohxhqjxlfhr (join_string with "l" as joining letter).
+  - seems that if both of those would match you have the flag. Patching the code doesn't work as it will just output your input.
+  - aAug aMepdpeuv aIsvohxhqjx aFhr (with capitalization shows up in stack at one point)
+aseWhldmakesthiruohxhohthego
+heWhohasthegoldmakesthiruo
+ABCDEFGHIJKLMNOPQRSTUVWXYZ12
+0123456789012345678901234567
+
+GHBCANOPQRSTUVWXYZ12DEFIJKLM
+0123456789012345678901234567
+
+... at the end I guess hewhohasthegoldmakestherules
+
+:)
+
+probably have to figure out what to do with the numbers and special characters

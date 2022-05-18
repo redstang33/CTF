@@ -1,0 +1,139 @@
+<!DOCTYPE SimutronQt4>
+<circuit type="simu">
+ 
+D E-T-47: 
+<item labelrot="0" objectName="D E-T-47" x="-356" y="36" itemtype="D FlipFlop" labelx="-8" rotation="0" labely="-32" Show_id="false" id="D E-T-47"/>
+ 
+Clock-52: 
+<item labelrot="0" objectName="Clock-52" x="-444" y="44" itemtype="Clock" labelx="-101" rotation="0" labely="-6" Freq="1" Show_id="true" id="Press Me>"/>
+ 
+D E-T-62: 
+<item labelrot="0" objectName="D E-T-62" x="-356" y="92" itemtype="D FlipFlop" labelx="-8" rotation="0" labely="-32" Show_id="false" id="D E-T-62"/>
+ 
+D E-T-63: 
+<item labelrot="0" objectName="D E-T-63" x="-356" y="148" itemtype="D FlipFlop" labelx="-8" rotation="0" labely="-32" Show_id="false" id="D E-T-63"/>
+ 
+D E-T-64: 
+<item labelrot="0" objectName="D E-T-64" x="-356" y="204" itemtype="D FlipFlop" labelx="-8" rotation="0" labely="-32" Show_id="false" id="D E-T-64"/>
+ 
+7-Seg Hex-79: 
+<item labelrot="0" num_disp="0" objectName="7-Seg Hex-79" x="-156" y="108" itemtype="7-Seg Hex" labelx="-8" rotation="0" labely="-32" Show_id="false" point="false" id="7-Seg Hex-79"/>
+ 
+Node-91: 
+<item labelrot="0" objectName="Node-91" x="-316" y="44" itemtype="Node" labelx="6" rotation="0" labely="-18" Show_id="false" id="Node-91"/>
+ 
+Node-94: 
+<item labelrot="0" objectName="Node-94" x="-316" y="100" itemtype="Node" labelx="6" rotation="0" labely="-18" Show_id="false" id="Node-94"/>
+ 
+Node-97: 
+<item labelrot="0" objectName="Node-97" x="-316" y="156" itemtype="Node" labelx="6" rotation="0" labely="-18" Show_id="false" id="Node-97"/>
+ 
+VCD Trace File-99: 
+<item labelrot="0" objectName="VCD Trace File-99" x="-116" Period="100000" y="12" itemtype="VCD Trace File" labelx="-8" rotation="0" labely="-32" Show_id="false" id="VCD Trace File-99" VCD_file="clock.vcd" Overwrite_file="false"/>
+ 
+VCD Probe-100: 
+<item labelrot="45" objectName="VCD Probe-100" x="-268" y="-4" itemtype="VCD Probe" labelx="8" rotation="-45" labely="-24" Show_id="true" id="Q0"/>
+ 
+VCD Probe-101: 
+<item labelrot="45" objectName="VCD Probe-101" x="-268" y="68" itemtype="VCD Probe" labelx="8" rotation="-45" labely="-24" Show_id="true" id="Q1"/>
+ 
+VCD Probe-102: 
+<item labelrot="45" objectName="VCD Probe-102" x="-268" y="140" itemtype="VCD Probe" labelx="8" rotation="-45" labely="-24" Show_id="true" id="Q2"/>
+ 
+VCD Probe-103: 
+<item labelrot="45" objectName="VCD Probe-103" x="-268" y="220" itemtype="VCD Probe" labelx="8" rotation="-45" labely="-24" Show_id="true" id="Q3"/>
+ 
+Node-105: 
+<item labelrot="0" objectName="Node-105" x="-284" y="28" itemtype="Node" labelx="6" rotation="0" labely="-18" Show_id="false" id="Node-105"/>
+ 
+Node-108: 
+<item labelrot="0" objectName="Node-108" x="-284" y="100" itemtype="Node" labelx="6" rotation="0" labely="-18" Show_id="false" id="Node-108"/>
+ 
+Node-111: 
+<item labelrot="0" objectName="Node-111" x="-292" y="140" itemtype="Node" labelx="6" rotation="0" labely="-18" Show_id="false" id="Node-111"/>
+ 
+Node-114: 
+<item labelrot="0" objectName="Node-114" x="-284" y="196" itemtype="Node" labelx="6" rotation="0" labely="-18" Show_id="false" id="Node-114"/>
+ 
+VCD Probe-116: 
+<item labelrot="45" objectName="VCD Probe-116" x="-404" y="-4" itemtype="VCD Probe" labelx="8" rotation="-45" labely="-24" Show_id="true" id="Clock"/>
+ 
+Node-121: 
+<item labelrot="0" objectName="Node-121" x="-404" y="44" itemtype="Node" labelx="6" rotation="0" labely="-18" Show_id="false" id="Node-121"/>
+ 
+Connector-68: 
+<item labelrot="0" objectName="Connector-68" x="-380" startpinid="D E-T-63_Innod-0" y="140" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-380,140,-380,140,-380,140,-380,140,-380,140,-396,140,-396,124,-316,124,-316,156" endpinid="Node-97-0" Show_id="false" id="Connector-68" startpininv="false" endpininv="false"/>
+ 
+Connector-69: 
+<item labelrot="0" objectName="Connector-69" x="-380" startpinid="D E-T-64_Innod-0" y="196" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-380,196,-380,196,-380,196,-380,196,-380,196,-396,196,-396,180,-316,180,-316,212,-332,212" endpinid="D E-T-64_Outnod-1" Show_id="false" id="Connector-69" startpininv="false" endpininv="false"/>
+ 
+Connector-67: 
+<item labelrot="0" objectName="Connector-67" x="-380" startpinid="D E-T-62_Innod-0" y="84" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-380,84,-380,84,-380,84,-380,84,-380,84,-396,84,-396,68,-316,68,-316,100" endpinid="Node-94-0" Show_id="false" id="Connector-67" startpininv="false" endpininv="false"/>
+ 
+Connector-65: 
+<item labelrot="0" objectName="Connector-65" x="-332" startpinid="D E-T-47_Outnod-1" y="44" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-332,44,-332,44,-332,44,-332,44,-332,44,-316,44" endpinid="Node-91-0" Show_id="false" id="Connector-65" startpininv="false" endpininv="false"/>
+ 
+Connector-89: 
+<item labelrot="0" objectName="Connector-89" x="-180" startpinid="7-Seg Hex-79_Innod-3" y="132" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-180,132,-180,132,-180,132,-180,196,-284,196" endpinid="Node-114-0" Show_id="false" id="Connector-89" startpininv="false" endpininv="false"/>
+ 
+Connector-76: 
+<item labelrot="0" objectName="Connector-76" x="-332" startpinid="D E-T-47_Outnod-0" y="28" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-332,28,-332,28,-332,28,-284,28" endpinid="Node-105-0" Show_id="false" id="Connector-76" startpininv="false" endpininv="false"/>
+ 
+Connector-90: 
+<item labelrot="0" objectName="Connector-90" x="-380" startpinid="D E-T-62_Innod-1" y="100" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-380,100,-380,100,-380,100,-380,100,-380,100,-412,100,-412,60,-316,60,-316,44" endpinid="Node-91-1" Show_id="false" id="Connector-90" startpininv="false" endpininv="false"/>
+ 
+Connector92: 
+<item labelrot="0" objectName="Connector92" x="-316" startpinid="Node-91-2" y="44" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-316,44,-316,44,-316,44,-316,44,-316,44,-316,12,-396,12,-396,28,-380,28" endpinid="D E-T-47_Innod-0" Show_id="false" id="Connector92" startpininv="false" endpininv="false"/>
+ 
+Connector-77: 
+<item labelrot="0" objectName="Connector-77" x="-332" startpinid="D E-T-62_Outnod-0" y="84" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-332,84,-332,84,-332,84,-300,84,-300,100,-284,100" endpinid="Node-108-0" Show_id="false" id="Connector-77" startpininv="false" endpininv="false"/>
+ 
+Connector-93: 
+<item labelrot="0" objectName="Connector-93" x="-380" startpinid="D E-T-63_Innod-1" y="156" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-380,156,-380,156,-380,156,-380,156,-380,156,-412,156,-412,116,-316,116,-316,100" endpinid="Node-94-1" Show_id="false" id="Connector-93" startpininv="false" endpininv="false"/>
+ 
+Connector95: 
+<item labelrot="0" objectName="Connector95" x="-316" startpinid="Node-94-2" y="100" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-316,100,-316,100,-316,100,-316,100,-316,100,-332,100" endpinid="D E-T-62_Outnod-1" Show_id="false" id="Connector95" startpininv="false" endpininv="false"/>
+ 
+Connector-78: 
+<item labelrot="0" objectName="Connector-78" x="-332" startpinid="D E-T-63_Outnod-0" y="140" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-332,140,-332,140,-332,140,-292,140" endpinid="Node-111-0" Show_id="false" id="Connector-78" startpininv="false" endpininv="false"/>
+ 
+Connector-96: 
+<item labelrot="0" objectName="Connector-96" x="-380" startpinid="D E-T-64_Innod-1" y="212" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-380,212,-380,212,-380,212,-380,212,-380,212,-412,212,-412,172,-316,172,-316,156" endpinid="Node-97-1" Show_id="false" id="Connector-96" startpininv="false" endpininv="false"/>
+ 
+Connector98: 
+<item labelrot="0" objectName="Connector98" x="-316" startpinid="Node-97-2" y="156" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-316,156,-316,156,-316,156,-316,156,-316,156,-332,156" endpinid="D E-T-63_Outnod-1" Show_id="false" id="Connector98" startpininv="false" endpininv="false"/>
+ 
+Connector-104: 
+<item labelrot="0" objectName="Connector-104" x="-284" startpinid="VCD Probe-100inpin" y="12" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-284,12,-284,12,-284,12,-284,28" endpinid="Node-105-1" Show_id="false" id="Connector-104" startpininv="false" endpininv="false"/>
+ 
+Connector106: 
+<item labelrot="0" objectName="Connector106" x="-284" startpinid="Node-105-2" y="28" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-284,28,-284,28,-284,28,-180,28,-180,84" endpinid="7-Seg Hex-79_Innod-0" Show_id="false" id="Connector106" startpininv="false" endpininv="false"/>
+ 
+Connector-107: 
+<item labelrot="0" objectName="Connector-107" x="-284" startpinid="VCD Probe-101inpin" y="84" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-284,84,-284,84,-284,84,-284,100" endpinid="Node-108-1" Show_id="false" id="Connector-107" startpininv="false" endpininv="false"/>
+ 
+Connector109: 
+<item labelrot="0" objectName="Connector109" x="-284" startpinid="Node-108-2" y="100" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-284,100,-284,100,-284,100,-180,100" endpinid="7-Seg Hex-79_Innod-1" Show_id="false" id="Connector109" startpininv="false" endpininv="false"/>
+ 
+Connector-110: 
+<item labelrot="0" objectName="Connector-110" x="-284" startpinid="VCD Probe-102inpin" y="156" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-284,156,-284,156,-284,156,-284,140,-292,140" endpinid="Node-111-1" Show_id="false" id="Connector-110" startpininv="false" endpininv="false"/>
+ 
+Connector112: 
+<item labelrot="0" objectName="Connector112" x="-292" startpinid="Node-111-2" y="140" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-292,140,-292,140,-292,140,-292,116,-180,116" endpinid="7-Seg Hex-79_Innod-2" Show_id="false" id="Connector112" startpininv="false" endpininv="false"/>
+ 
+Connector-113: 
+<item labelrot="0" objectName="Connector-113" x="-284" startpinid="VCD Probe-103inpin" y="236" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-284,236,-284,236,-284,236,-284,196" endpinid="Node-114-1" Show_id="false" id="Connector-113" startpininv="false" endpininv="false"/>
+ 
+Connector115: 
+<item labelrot="0" objectName="Connector115" x="-284" startpinid="Node-114-2" y="196" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-284,196,-284,196,-284,196,-332,196" endpinid="D E-T-64_Outnod-0" Show_id="false" id="Connector115" startpininv="false" endpininv="false"/>
+ 
+Connector-99: 
+<item labelrot="0" objectName="Connector-99" x="-428" startpinid="Clock-52outnod" y="44" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-428,44,-428,44,-428,44,-404,44" endpinid="Node-121-0" Show_id="false" id="Connector-99" startpininv="false" endpininv="false"/>
+ 
+Connector-120: 
+<item labelrot="0" objectName="Connector-120" x="-420" startpinid="VCD Probe-116inpin" y="12" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-420,12,-420,12,-420,12,-420,28,-404,28,-404,44" endpinid="Node-121-1" Show_id="false" id="Connector-120" startpininv="false" endpininv="false"/>
+ 
+Connector122: 
+<item labelrot="0" objectName="Connector122" x="-404" startpinid="Node-121-2" y="44" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-404,44,-404,44,-404,44,-380,44" endpinid="D E-T-47_Innod-1" Show_id="false" id="Connector122" startpininv="false" endpininv="false"/>
+ 
+</circuit>

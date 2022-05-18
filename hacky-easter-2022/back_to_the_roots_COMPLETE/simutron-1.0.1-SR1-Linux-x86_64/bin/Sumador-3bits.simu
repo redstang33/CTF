@@ -1,0 +1,76 @@
+<!DOCTYPE SimutronQt4>
+<circuit type="simu">
+ 
+Logic S.-1: 
+<item labelrot="0" objectName="Logic S.-1" x="-140" y="-68" itemtype="Logic S." labelx="-56" rotation="0" labely="-8" Show_id="false" id="Logic S.-1"/>
+ 
+Logic S.-2: 
+<item labelrot="0" objectName="Logic S.-2" x="-140" y="-52" itemtype="Logic S." labelx="-56" rotation="0" labely="-8" Show_id="false" id="Logic S.-2"/>
+ 
+Logic S.-3: 
+<item labelrot="0" objectName="Logic S.-3" x="-140" y="-36" itemtype="Logic S." labelx="-56" rotation="0" labely="-8" Show_id="false" id="Logic S.-3"/>
+ 
+Logic S.-4: 
+<item labelrot="0" objectName="Logic S.-4" x="-140" y="44" itemtype="Logic S." labelx="-56" rotation="0" labely="-8" Show_id="false" id="Logic S.-4"/>
+ 
+Logic S.-5: 
+<item labelrot="0" objectName="Logic S.-5" x="-140" y="60" itemtype="Logic S." labelx="-56" rotation="0" labely="-8" Show_id="false" id="Logic S.-5"/>
+ 
+Logic S.-6: 
+<item labelrot="0" objectName="Logic S.-6" x="-140" y="76" itemtype="Logic S." labelx="-56" rotation="0" labely="-8" Show_id="false" id="Logic S.-6"/>
+ 
+F Adder-7: 
+<item labelrot="0" objectName="F Adder-7" x="4" y="-60" itemtype="F Adder" labelx="-8" rotation="0" labely="-32" Show_id="false" id="F Adder-7"/>
+ 
+F Adder-8: 
+<item labelrot="0" objectName="F Adder-8" x="4" y="4" itemtype="F Adder" labelx="-8" rotation="0" labely="-32" Show_id="false" id="F Adder-8"/>
+ 
+F Adder-9: 
+<item labelrot="0" objectName="F Adder-9" x="4" y="68" itemtype="F Adder" labelx="-8" rotation="0" labely="-32" Show_id="false" id="F Adder-9"/>
+ 
+Logic S.-16: 
+<item labelrot="0" objectName="Logic S.-16" x="-20" y="-116" itemtype="Logic S." labelx="-37" rotation="0" labely="-27" Show_id="true" id="Carry in"/>
+ 
+7-Seg Hex-18: 
+<item labelrot="0" num_disp="0" objectName="7-Seg Hex-18" x="132" y="-36" itemtype="7-Seg Hex" labelx="-8" rotation="0" labely="-32" Show_id="false" point="false" id="7-Seg Hex-18"/>
+ 
+Connector-10: 
+<item labelrot="0" objectName="Connector-10" x="-124" startpinid="Logic S.-1outnod" y="-68" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-124,-68,-124,-68,-124,-68,-124,-68,-20,-68" endpinid="F Adder-7_Innod-0" Show_id="false" id="Connector-10" startpininv="false" endpininv="false"/>
+ 
+Connector-11: 
+<item labelrot="0" objectName="Connector-11" x="-124" startpinid="Logic S.-2outnod" y="-52" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-124,-52,-124,-52,-84,-52,-84,-4,-20,-4" endpinid="F Adder-8_Innod-0" Show_id="false" id="Connector-11" startpininv="false" endpininv="false"/>
+ 
+Connector-12: 
+<item labelrot="0" objectName="Connector-12" x="-124" startpinid="Logic S.-3outnod" y="-36" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-124,-36,-124,-36,-124,-36,-100,-36,-100,28,-20,28,-20,60" endpinid="F Adder-9_Innod-0" Show_id="false" id="Connector-12" startpininv="false" endpininv="false"/>
+ 
+Connector-13: 
+<item labelrot="0" objectName="Connector-13" x="-124" startpinid="Logic S.-6outnod" y="76" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-124,76,-124,76,-20,76,-20,76" endpinid="F Adder-9_Innod-1" Show_id="false" id="Connector-13" startpininv="false" endpininv="false"/>
+ 
+Connector-14: 
+<item labelrot="0" objectName="Connector-14" x="-124" startpinid="Logic S.-5outnod" y="60" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-124,60,-124,60,-36,60,-36,12,-20,12" endpinid="F Adder-8_Innod-1" Show_id="false" id="Connector-14" startpininv="false" endpininv="false"/>
+ 
+Connector-15: 
+<item labelrot="0" objectName="Connector-15" x="-124" startpinid="Logic S.-4outnod" y="44" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-124,44,-124,44,-52,44,-52,-28,-20,-28,-20,-52" endpinid="F Adder-7_Innod-1" Show_id="false" id="Connector-15" startpininv="false" endpininv="false"/>
+ 
+Connector-17: 
+<item labelrot="0" objectName="Connector-17" x="-4" startpinid="Logic S.-16outnod" y="-116" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-4,-116,-4,-116,44,-116,44,-76,28,-76" endpinid="F Adder-7_Innod-2" Show_id="false" id="Connector-17" startpininv="false" endpininv="false"/>
+ 
+Connector-20: 
+<item labelrot="0" objectName="Connector-20" x="28" startpinid="F Adder-7_Outnod-1" y="-44" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="28,-44,28,-44,28,-44,28,-44,28,-12" endpinid="F Adder-8_Innod-2" Show_id="false" id="Connector-20" startpininv="false" endpininv="false"/>
+ 
+Connector-25: 
+<item labelrot="0" objectName="Connector-25" x="28" startpinid="F Adder-8_Outnod-1" y="20" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="28,20,28,20,28,20,28,20,28,52" endpinid="F Adder-9_Innod-2" Show_id="false" id="Connector-25" startpininv="false" endpininv="false"/>
+ 
+Connector-25: 
+<item labelrot="0" objectName="Connector-25" x="28" startpinid="F Adder-7_Outnod-0" y="-60" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="28,-60,28,-60,28,-60,28,-60,108,-60" endpinid="7-Seg Hex-18_Innod-0" Show_id="false" id="Connector-25" startpininv="false" endpininv="false"/>
+ 
+Connector-26: 
+<item labelrot="0" objectName="Connector-26" x="28" startpinid="F Adder-8_Outnod-0" y="4" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="28,4,28,4,28,4,28,4,44,4,44,-44,108,-44" endpinid="7-Seg Hex-18_Innod-1" Show_id="false" id="Connector-26" startpininv="false" endpininv="false"/>
+ 
+Connector-27: 
+<item labelrot="0" objectName="Connector-27" x="28" startpinid="F Adder-9_Outnod-0" y="68" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="28,68,28,68,28,68,28,68,60,68,60,-28,108,-28" endpinid="7-Seg Hex-18_Innod-2" Show_id="false" id="Connector-27" startpininv="false" endpininv="false"/>
+ 
+Connector-28: 
+<item labelrot="0" objectName="Connector-28" x="28" startpinid="F Adder-9_Outnod-1" y="84" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="28,84,28,84,28,84,28,84,76,84,76,-12,108,-12" endpinid="7-Seg Hex-18_Innod-3" Show_id="false" id="Connector-28" startpininv="false" endpininv="false"/>
+ 
+</circuit>

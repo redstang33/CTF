@@ -1,0 +1,40 @@
+<!DOCTYPE SimutronQt4>
+<circuit type="simu">
+ 
+Counter-1: 
+<item labelrot="0" objectName="Counter-1" x="20" y="28" itemtype="Counter" labelx="-68" rotation="0" labely="28" Max_Value="99999" Show_id="true" id="Counter divides frequency by 100000"/>
+ 
+Clock-2: 
+<item labelrot="0" objectName="Clock-2" x="-60" y="12" itemtype="Clock" labelx="-152" rotation="0" labely="-7" Freq="100000" Show_id="true" id="100000 kHz Clock"/>
+ 
+D E-T-3: 
+<item labelrot="0" objectName="D E-T-3" x="108" y="20" itemtype="D FlipFlop" labelx="-42" rotation="0" labely="-53" Show_id="true" id="D-trigger converts the high duty cycle impulses to something we can observe"/>
+ 
+VCD Probe-7: 
+<item labelrot="45" objectName="VCD Probe-7" x="196" y="-4" itemtype="VCD Probe" labelx="8" rotation="-45" labely="-24" Show_id="false" id="VCD Probe-7"/>
+ 
+VCD Probe-8: 
+<item labelrot="45" objectName="VCD Probe-8" x="-12" y="-36" itemtype="VCD Probe" labelx="-17" rotation="-45" labely="-52" Show_id="true" id="Probe shows the high frequency impulses as dimmed green"/>
+ 
+Node-13: 
+<item labelrot="0" objectName="Node-13" x="-28" y="12" itemtype="Node" labelx="6" rotation="0" labely="-18" Show_id="false" id="Node-13"/>
+ 
+Connector-4: 
+<item labelrot="0" objectName="Connector-4" x="84" startpinid="D E-T-3_Innod-0" y="12" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="84,12,84,12,84,12,84,12,84,12,68,12,68,-12,148,-12,148,28,132,28" endpinid="D E-T-3_Outnod-1" Show_id="false" id="Connector-4" startpininv="false" endpininv="false"/>
+ 
+Connector-8: 
+<item labelrot="0" objectName="Connector-8" x="132" startpinid="D E-T-3_Outnod-0" y="12" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="132,12,132,12,132,12,132,12,132,12,180,12" endpinid="VCD Probe-7inpin" Show_id="false" id="Connector-8" startpininv="false" endpininv="false"/>
+ 
+Connector-6: 
+<item labelrot="0" objectName="Connector-6" x="-44" startpinid="Clock-2outnod" y="12" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-44,12,-44,12,-44,12,-28,12" endpinid="Node-13-0" Show_id="false" id="Connector-6" startpininv="false" endpininv="false"/>
+ 
+Connector-12: 
+<item labelrot="0" objectName="Connector-12" x="-28" startpinid="VCD Probe-8inpin" y="-20" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-28,-20,-28,-20,-28,-20,-28,12" endpinid="Node-13-1" Show_id="false" id="Connector-12" startpininv="false" endpininv="false"/>
+ 
+Connector14: 
+<item labelrot="0" objectName="Connector14" x="-28" startpinid="Node-13-2" y="12" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="-28,12,-28,12,-28,12,-12,12" endpinid="Counter-1_Innod-0" Show_id="false" id="Connector14" startpininv="false" endpininv="false"/>
+ 
+Connector-5: 
+<item labelrot="0" objectName="Connector-5" x="52" startpinid="Counter-1_Outnod-0" y="28" itemtype="Connector" labelx="-8" rotation="0" labely="-32" pointlist="52,28,84,28" endpinid="D E-T-3_Innod-1" Show_id="false" id="Connector-5" startpininv="false" endpininv="false"/>
+ 
+</circuit>

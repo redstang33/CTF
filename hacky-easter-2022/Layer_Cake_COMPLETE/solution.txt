@@ -1,0 +1,35 @@
+docker pull hackyeaster/layercake
+
+docker run -it hackyeaster/layercake /bin/sh
+
+docker run -it --rm -v $(pwd):/mnt hackyeaster/layercake /bin/sh
+so you have the directory
+
+copied egg.png to my machine
+
+foremost didn't find anything
+
+neither did binwalk
+
+nor stegsolve
+
+docker run -it --rm -v $(pwd):/data dominicbreuker/stego-toolkit /bin/bash
+ - nothing with zsteg
+ - nothing with other stegtools neither
+
+ layercake.graphics looks interesting
+ seems unrelated though.
+
+docker history hackyeaster/layercake ... reveals lots of copy commands
+https://github.com/samalba/docker-registry-debug.git
+
+https://devops.stackexchange.com/questions/2731/downloading-docker-images-from-docker-hub-without-using-docker
+
+go through this and you get a whole bunch of tar archives each with a different egg.png
+
+untar them all and find the egg with the flag
+
+for i in ????????????*; do                                        ✔
+tar xvf $i
+mv app/egg.png app/$i.png
+done

@@ -1,0 +1,179 @@
+//squirrel script
+
+function wxStr2sqStr(wxStr)
+{
+  local sqStr = "";
+  sqStr += wxStr;
+  return sqStr;
+}
+
+function sqStr2wxStr(sqStr)
+{
+  local wxStr = ::wxString();
+  foreach (chr in sqStr)
+  {
+  wxStr.AddChar(chr);
+  }
+  return wxStr;
+}
+
+function sqStrSplit(sqStr, sqSep, maxParts = 0, sequentialAsSingle = false)
+{
+  local ret = [];
+  local wxStr = ::wxString();
+  local ind = 0;
+  local part_no = 1;
+  local addchr = true;
+  foreach (chr in sqStr)
+  {
+    if ((maxParts > 0) && (part_no >= maxParts))
+    {
+      ret.append(sqStr.slice(ind));
+      return ret;
+    }
+    addchr = true;
+    foreach (chrSep in sqSep)
+    {
+      if (chr == chrSep)
+      {
+	if (sequentialAsSingle && (wxStr.len() == 0))
+	{
+	  addchr = false;
+	  break;
+	}
+        ret.append(wxStr2sqStr(wxStr));
+        part_no += 1;
+        wxStr = ::wxString();
+        addchr = false;
+        break;
+      }
+    }
+    ind += 1;
+    if (addchr)
+      wxStr.AddChar(chr);
+  }
+  if (wxStr.Length() > 0)
+    ret.append(wxStr2sqStr(wxStr));
+  return ret;
+}
+
+function ComposeCBStuffPath(relPath, baseDirType, relPathType)
+{
+  local file = ::wxFileName();
+  local base_folder = GetFolder(baseDirType); //sdScriptsGlobal);
+  if (IsNull(base_folder))
+    return null;
+  base_folder += ReplaceMacros(relPath); //_T("/../templates/wizard/arduino");
+  file.Assign(base_folder, relPathType);
+  //file.AssignDir(base_folder, wxPATH_UNIX);
+  //file.SetFullName(_T("wizard.xrc"));
+  if (!file.Normalize(wxPATH_NORM_ALL, _T(""), relPathType)) //wxPATH_UNIX))
+    return null;
+  return file;
+}
+
+function GetAbsUnixPath(path, cwd = _T(""))
+{
+  local file = ::wxFileName();
+  file.Assign(ReplaceMacros(path), wxPATH_UNIX);
+  if (!file.Normalize(wxPATH_NORM_ALL, cwd, wxPATH_UNIX))
+    return _T("");
+  return file.GetFullPath(wxPATH_UNIX);
+}
+
+function UnixPathToNative(path, normalize = true)
+{
+  local file = ::wxFileName();
+  file.Assign(ReplaceMacros(path), wxPATH_UNIX);
+  if (normalize)
+  {
+    if (!file.Normalize(wxPATH_NORM_ALL, _T(""), wxPATH_UNIX))
+      return _T("");
+  }
+  return file.GetFullPath(wxPATH_NATIVE);
+}
+
+function NativePathToUnix(path)
+{
+  local file = ::wxFileName();
+  file.Assign(ReplaceMacros(path), wxPATH_NATIVE);
+  if (!file.Normalize(wxPATH_NORM_ALL, _T(""), wxPATH_NATIVE))
+    return _T("");
+  return file.GetFullPath(wxPATH_UNIX);
+}
+
+function LocateCBFile(relPath, baseDirType, relPathType, outPathType)
+{
+  local file = ComposeCBStuffPath(relPath, baseDirType, relPathType);
+  local file_name = ::wxString();
+  if (IsNull(file))
+    return file_name;
+  file_name = file.GetFullPath(wxPATH_NATIVE);
+  if (!IO.FileExists(file_name))
+    return _T("");
+  if (outPathType != wxPATH_NATIVE)
+    file_name = file.GetFullPath(outPathType);
+  return file_name;
+}
+
+function LocateCBDir(relPath, baseDirType, relPathType, outPathType)
+{
+  local file = ComposeCBStuffPath(relPath, baseDirType, relPathType);
+  local file_name = ::wxString();
+  if (IsNull(file))
+    return file_name;
+  file_name = file.GetFullPath(wxPATH_NATIVE);
+  if (!IO.DirectoryExists(file_name))
+    return _T("");
+  if (outPathType != wxPATH_NATIVE)
+    file_name = file.GetFullPath(outPathType);
+  return file_name;
+}
+
+function MakeCBDir(relPath, baseDirType, relPathType, outPathType)
+{
+  local file = ComposeCBStuffPath(relPath, baseDirType, relPathType);
+  local file_name = ::wxString();
+  if (IsNull(file))
+    return file_name;
+  file_name = file.GetFullPath(wxPATH_NATIVE);
+  if (!IO.DirectoryExists(file_name))
+  {
+    if (!IO.CreateDirectory(file_name))
+      return _T("");
+  }
+  if (outPathType != wxPATH_NATIVE)
+    file_name = file.GetFullPath(outPathType);
+  return file_name;
+}
+
+function VerifyDirExists(dir_path, path_mode = wxPATH_NATIVE)
+{
+    local file_name = ::wxString();
+    local file = ::wxFileName();
+    file_name += ReplaceMacros(dir_path);
+    file.AssignDir(file_name, path_mode);
+    file_name = file.GetFullPath(wxPATH_NATIVE);
+    //if (file_name.Right(1).Matches(wxFILE_SEP_PATH))
+    //  file_name = file_name.Remove(file_name.len()-1, 1);
+    Log(_T("VerifyDirExists: ") + file_name);
+    if ( ! IO.DirectoryExists(file_name))
+    {
+      file_name = ::wxString();
+    }
+    return file_name;
+}
+
+function VerifyFileExists(file_path, path_mode = wxPATH_NATIVE)
+{
+    local file_name = ::wxString();
+    local file = ::wxFileName();
+    file_name += ReplaceMacros(file_path);
+    file.Assign(file_name, path_mode);
+    file_name = file.GetFullPath(wxPATH_NATIVE);
+    if ( ! IO.FileExists(file_name))
+    {
+      file_name = ::wxString();
+    }
+    return file_name;
+}

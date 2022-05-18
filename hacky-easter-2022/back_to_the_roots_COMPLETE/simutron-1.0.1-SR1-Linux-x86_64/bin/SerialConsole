@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+
+# Example: uncomment the following two lines to use picocom:
+#mate-terminal -x picocom -b 115200 --omap crlf $1
+#exit 0
+
+which cutecom 2>&1 >> /dev/null
+cutecom_avlbl=$?
+if (($cutecom_avlbl!=0)); then
+  zenity --warning --text="Please install cutecom or edit SerialConsole script \
+in the simutron bin folder to call your preferred serial terminal program"
+  exit 1
+fi
+
+config=$(cat ~/.config/CuteCom/CuteCom.conf |sed "s@\(CurrentDevice=\)\(.*\)@\1$1@" |sed "s@\(AllDevices=\)\(.*\)@\1$1@" |sed "s@\(Device=\)\(.*\)@\1$1@" |sed 's/\(History=.*\)//')
+
+echo "$config" > ~/.config/CuteCom/CuteCom.conf
+
+#echo [cutecom] > ~/.config/CuteCom/CuteCom.conf
+#echo Device=$1 >> ~/.config/CuteCom/CuteCom.conf
+#echo CurrentDevice=$1 >> ~/.config/CuteCom/CuteCom.conf
+
+cutecom &

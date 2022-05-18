@@ -1,0 +1,4 @@
+cyberchef
+hex hex oct
+then the "wave" is where it peaks and there's additional oct... just
+find the oct's and figure it out

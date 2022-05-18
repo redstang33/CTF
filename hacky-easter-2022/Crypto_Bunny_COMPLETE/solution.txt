@@ -1,0 +1,7 @@
+exiftool reveals a url: https://eu.badgr.com/public/assertions/aeT2h9EWTHyiqHk7Yx4X4Q
+
+b64 encoded string. Tags "carrot". Also it says "for the rabbit cipher masters only"
+
+Google "rabbit cipher"
+
+there's an online tool. password is carrot

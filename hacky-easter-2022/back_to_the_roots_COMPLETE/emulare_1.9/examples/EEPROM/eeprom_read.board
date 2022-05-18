@@ -1,0 +1,23 @@
+<board>
+  <doc-version>0.1</doc-version>
+  <components>
+    <component>
+      <name>ATMega 1</name>
+      <dll>C:\temp\emulare_1.7\components\ATMega.dll</dll>
+      <title>ATMega</title>
+      <version>1.0.0.0</version>
+      <specific>
+        <ATMega>
+          <Program>eeprom_read.cpp.hex</Program>
+          <SerialPort>
+          </SerialPort>
+        </ATMega>
+      </specific>
+      <position>
+        <x>160</x>
+        <y>64</y>
+      </position>
+    </component>
+  </components>
+  <wires />
+</board>

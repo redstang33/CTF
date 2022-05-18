@@ -1,0 +1,30 @@
+strings cyclic shows stuff with GHC ...
+Haskell language...
+there's a decompiler "hsdecomp" but it's throwing errors
+a newer fork of it is working though.
+
+ ~/h/cyclical_COMPLETE  python3 hsdecomp/runner.py cyclic                  ✔
+1
+##################
+##################
+##################
+607744
+1
+##################
+##################
+##################
+17439
+1
+1
+##################
+##################
+##################
+2431673855
+##################
+##################
+##################
+17439
+Main_main_closure = >> $fMonadIO (putStrLn (\loc_4226776_arg_0 loc_4226776_arg_1 loc_4226776_arg_2 loc_4226776_arg_3 loc_4226776_arg_4 -> unpackCStringUtf8# 4876512)) ($ (\loc_4227544_arg_0 loc_4227544_arg_1 loc_4227544_arg_2 loc_4227544_arg_3 loc_4227544_arg_4 -> mapMzu $fFoldable[] $fMonadIO (\Main_putFlush_info_arg_0 -> >> $fMonadIO (putChar Main_putFlush_info_arg_0) (\loc_4226968_arg_0 loc_4226968_arg_1 loc_4226968_arg_2 loc_4226968_arg_3 loc_4226968_arg_4 -> hFlush stdout))) (\loc_4227472_arg_0 loc_4227472_arg_1 loc_4227472_arg_2 loc_4227472_arg_3 loc_4227472_arg_4 -> map (\Main_convert_info_arg_0 -> genericIndex $fIntegralInteger (cycle (unpackCString# "abcdefghijklmnopqrstuvwxyz1234567890_{}")) Main_convert_info_arg_0) (: (IS 7) (: (IS 4) (: (IS 27) (: (IS 35) (: (IS 27) (: (IS 27) (: (IS 37) (: (IS 18604515501954) (: (IS 9089503077614) (: (IS 34052138441993) (: (IS 21227909669131) (: (IS 39663104618160) (: (IS 16103958750284) (: (IS 16456688276676) (: (IS 15426709948652) (: (IS 35366249530142) (: (IS 30753312664451) (: (IS 34621244773091) (: (IS 16094279020284) (: (IS 25308844326686) (: (IS 10237817005295) (: (IS 16074542603063) (: (IS 13960368551308) (: (IS 20563985455787) (: (IS 25423361916669) (: (IS 36367841662112) []))))))))))))))))))))))))))))
+
+
+the IS ... is the position of the character in the string.

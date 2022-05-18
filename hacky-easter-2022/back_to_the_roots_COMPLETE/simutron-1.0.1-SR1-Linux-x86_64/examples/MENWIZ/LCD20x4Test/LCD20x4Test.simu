@@ -1,0 +1,70 @@
+<!DOCTYPE SimutronQt4>
+<circuit type="simu">
+ 
+AVR MCU-1: 
+<item itemtype="AVR MCU" rotation="0" labelrot="0" labelx="-40" labely="-108" objectName="AVR MCU-1" UART_list="uart0" x="-36" firmware_elf="bin/Debug/LCD20x4Test.elf" y="60" Show_id="false" id="AVR MCU-1" fcpu_HZ="16000000" MCU_model="atmega328p" serial_connections="uart0=AVR Serial Connection-41=/tmp/simavr1-uart0"/>
+ 
+Hd44780 LCD-2: 
+<item itemtype="Hd44780 LCD" rotation="0" labelrot="0" labelx="-8" Rows="4" labely="-32" objectName="Hd44780 LCD-2" x="4" y="-108" Show_id="false" id="Hd44780 LCD-2" Cols="20"/>
+ 
+Push Button-29: 
+<item itemtype="Push Button" rotation="0" labelrot="0" labelx="-66" labely="-5" objectName="Push Button-29" x="-188" y="116" Show_id="true" id="LEFT"/>
+ 
+Push Button-31: 
+<item itemtype="Push Button" rotation="0" labelrot="0" labelx="-75" labely="-6" objectName="Push Button-31" x="-188" y="-12" Show_id="true" id="RIGHT"/>
+ 
+Push Button-33: 
+<item itemtype="Push Button" rotation="0" labelrot="0" labelx="-56" labely="-8" objectName="Push Button-33" x="-188" y="4" Show_id="true" id="UP"/>
+ 
+Push Button-35: 
+<item itemtype="Push Button" rotation="0" labelrot="0" labelx="-80" labely="-8" objectName="Push Button-35" x="-188" y="20" Show_id="true" id="DOWN"/>
+ 
+Push Button-37: 
+<item itemtype="Push Button" rotation="0" labelrot="0" labelx="-87" labely="-6" objectName="Push Button-37" x="-188" y="36" Show_id="true" id="ESCAPE"/>
+ 
+Push Button-39: 
+<item itemtype="Push Button" rotation="0" labelrot="0" labelx="-95" labely="-6" objectName="Push Button-39" x="-188" y="52" Show_id="true" id="CONFIRM"/>
+ 
+AVR Serial Connection-41: 
+<item itemtype="AVR Serial Connection" rotation="0" labelrot="0" labelx="-24" labely="-44" Target_MCU="AVR MCU-1" Target_UART="uart0" objectName="AVR Serial Connection-41" x="60" Host_PTY="/tmp/simavr1-uart0" y="116" Show_id="false" id="AVR Serial Connection-41"/>
+ 
+Connector-6: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="Hd44780 LCD-2_Innod-1" startpininv="false" objectName="Connector-6" startpinid="AVR MCU-1_Innod-9" endpininv="false" x="12" y="-4" Show_id="false" id="Connector-6" pointlist="12,-4,12,-4,12,-4,12,-4,12,-4,44,-4,44,-92"/>
+ 
+Connector-25: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="Hd44780 LCD-2_Innod-7" startpininv="false" objectName="Connector-25" startpinid="AVR MCU-1_Innod-10" endpininv="false" x="12" y="4" Show_id="false" id="Connector-25" pointlist="12,4,12,4,12,4,12,4,12,4,140,4,140,-92"/>
+ 
+Connector-26: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="Hd44780 LCD-2_Innod-8" startpininv="false" objectName="Connector-26" startpinid="AVR MCU-1_Innod-11" endpininv="false" x="12" y="12" Show_id="false" id="Connector-26" pointlist="12,12,12,12,12,12,12,12,12,12,156,12,156,-92"/>
+ 
+Connector-27: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="Hd44780 LCD-2_Innod-9" startpininv="false" objectName="Connector-27" startpinid="AVR MCU-1_Innod-12" endpininv="false" x="12" y="20" Show_id="false" id="Connector-27" pointlist="12,20,12,20,12,20,12,20,12,20,172,20,172,-92"/>
+ 
+Connector-28: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="Hd44780 LCD-2_Innod-10" startpininv="false" objectName="Connector-28" startpinid="AVR MCU-1_Innod-13" endpininv="false" x="12" y="28" Show_id="false" id="Connector-28" pointlist="12,28,12,28,12,28,12,28,12,28,188,28,188,-92"/>
+ 
+Connector-3: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="Hd44780 LCD-2_Innod-2" startpininv="false" objectName="Connector-3" startpinid="AVR MCU-1_Innod-5" endpininv="false" x="-84" y="28" Show_id="false" id="Connector-3" pointlist="-84,28,-84,28,-100,28,-100,-60,60,-60,60,-92"/>
+ 
+Connector-29: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="AVR MCU-1_Innod-8" startpininv="false" objectName="Connector-29" startpinid="Hd44780 LCD-2_Innod-0" endpininv="false" x="28" y="-92" Show_id="false" id="Connector-29" pointlist="28,-92,28,-92,28,-92,28,-92,28,-92,28,-12,12,-12"/>
+ 
+Connector-30: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="AVR MCU-1_Innod-23" startpininv="false" objectName="Connector-30" startpinid="Push Button-29outnod" endpininv="false" x="-172" y="116" Show_id="false" id="Connector-30" pointlist="-172,116,-172,116,-172,116,-84,116"/>
+ 
+Connector-32: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="AVR MCU-1_Innod-0" startpininv="false" objectName="Connector-32" startpinid="Push Button-31outnod" endpininv="false" x="-172" y="-12" Show_id="false" id="Connector-32" pointlist="-172,-12,-172,-12,-172,-12,-84,-12"/>
+ 
+Connector-34: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="AVR MCU-1_Innod-1" startpininv="false" objectName="Connector-34" startpinid="Push Button-33outnod" endpininv="false" x="-172" y="4" Show_id="false" id="Connector-34" pointlist="-172,4,-172,4,-172,4,-148,4,-148,-4,-84,-4"/>
+ 
+Connector-36: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="AVR MCU-1_Innod-2" startpininv="false" objectName="Connector-36" startpinid="Push Button-35outnod" endpininv="false" x="-172" y="20" Show_id="false" id="Connector-36" pointlist="-172,20,-172,20,-172,20,-140,20,-140,4,-84,4"/>
+ 
+Connector-38: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="AVR MCU-1_Innod-3" startpininv="false" objectName="Connector-38" startpinid="Push Button-37outnod" endpininv="false" x="-172" y="36" Show_id="false" id="Connector-38" pointlist="-172,36,-172,36,-172,36,-132,36,-132,12,-84,12"/>
+ 
+Connector-40: 
+<item itemtype="Connector" rotation="0" labelrot="0" labelx="-8" labely="-32" endpinid="AVR MCU-1_Innod-4" startpininv="false" objectName="Connector-40" startpinid="Push Button-39outnod" endpininv="false" x="-172" y="52" Show_id="false" id="Connector-40" pointlist="-172,52,-172,52,-172,52,-116,52,-116,20,-84,20"/>
+ 
+</circuit>

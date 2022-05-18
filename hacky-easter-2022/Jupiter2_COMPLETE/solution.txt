@@ -1,0 +1,9 @@
+This one drove me nuts.
+
+The picture is a 3D anaglyph picture so most likely the information is in the R and B channels only.
+
+On Discord someone said you can use Cyberchef for the challenge! Nice feature in there.
+There's a extract LSB in there where you select R and B ...
+However it took a while to also find the right recipe for "rotate left" so that bits don't get lost.
+The tip was "a bit off" in the challenge description and I always thought that's what you have to do but used the wrong recipe (shift left instead of rotate left)
+2 bits to the left with carry through did the trick.
